@@ -1,5 +1,7 @@
 <script>
     import Button from './Button.svelte'
+    import TextShadow from './stateless/TextShadow.svelte'
+    import TextBorder from './stateless/TextBorder.svelte'
 </script>
 
 <style>
@@ -11,13 +13,20 @@
             url(/assets/fonts/Supercell-Magic.ttf) format('ttf');
     }
 
-    * {
+    :global(*) {
         font-family: Supercell-Magic;
+    }
+
+    :global(body) {
+        background: url('https://media.discordapp.net/attachments/484788432367779862/670590182625378324/ux.png');
+        background-position: 0;
     }
 </style>
 
 <main>
-    <h1>Hello CodeSandbox</h1>
+    <TextShadow title="Enzo" />
+    <TextBorder title="Juandi" fontSize="15px" />
+    <TextBorder title="Coypu" />
     <h2>Start editing to see some magic happenssssss nooo!</h2>
     <Button />
 </main>
