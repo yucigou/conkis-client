@@ -58,7 +58,11 @@
 <main>
     <TextShadow title="Enzo" />
     <TextShadow2 title="Eñzó" />
-    <TextShadow title="Enzo" fontSize="100px" />
+    <TextShadow
+        title="Enzo"
+        fontSize="100px"
+        borderSize="2.5px"
+        shadowTop="7px" />
     <TextBorder title="Juandi" />
     <TextBorder title="Coypu" color="red" />
     <h2>Start editing to see some magic happenssssss nooo!</h2>

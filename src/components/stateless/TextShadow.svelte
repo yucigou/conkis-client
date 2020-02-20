@@ -1,6 +1,8 @@
 <script>
     export let title
     export let fontSize = '35px'
+    export let borderSize = '1.5px'
+    export let shadowTop = '4px'
 </script>
 
 <style>
@@ -23,19 +25,20 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
-        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-width: var(--borderSize);
         -webkit-text-stroke-color: black;
     }
 
     .shadow {
-        top: 4px;
+        top: var(--shadowTop);
         color: black;
         position: absolute;
         z-index: -1;
     }
 </style>
 
-<div style="--fontSize:{fontSize}">
+<div
+    style="--fontSize:{fontSize};--borderSize:{borderSize};--shadowTop:{shadowTop}">
     <span class="shadow">{title}</span>
     <span class="body">{title}</span>
 </div>
