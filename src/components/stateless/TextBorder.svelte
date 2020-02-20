@@ -12,7 +12,7 @@
         -webkit-background-clip: text;
         -webkit-text-stroke-width: 1.2px;
         -webkit-text-stroke-color: black;
-        letter-spacing: -1px;
+        letter-spacing: -0.5px;
     }
 </style>
 

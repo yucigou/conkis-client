@@ -20,7 +20,7 @@
 
         -webkit-text-stroke-width: 1.5px;
         -webkit-text-stroke-color: black;
-        letter-spacing: -1.5px;
+        letter-spacing: -1px;
     }
 
     .shadow {
