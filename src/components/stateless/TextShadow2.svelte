@@ -1,5 +1,6 @@
 <script>
     export let title
+    export let shadow = true
     export let fontSize = '35px'
 </script>
 
@@ -7,11 +8,6 @@
     div {
         font-family: 'Nougat';
         font-size: var(--fontSize);
-        letter-spacing: -1px;
-        position: relative;
-    }
-
-    .body {
         background: linear-gradient(
             to bottom,
             #ffffff 0%,
@@ -19,26 +15,20 @@
             #ebebeb 51%,
             #ebebeb 100%
         );
-
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
         -webkit-text-stroke-width: 1.5px;
         -webkit-text-stroke-color: black;
+        letter-spacing: -1.5px;
     }
 
     .shadow {
-        top: 4px;
-        color: black;
-        position: absolute;
-        z-index: -1;
+        filter: drop-shadow(0 4px black);
     }
 </style>
 
-<div style="--fontSize:{fontSize}">
-    <span class="shadow">{title}</span>
-    <span class="body">{title}</span>
-</div>
+<div class:shadow style="--fontSize:{fontSize}">{title}</div>
 
 <!--
 div {

@@ -1,21 +1,22 @@
 <script>
     export let title
-    export let fontSize = '16px'
+    export let fontSize = '20px'
+    export let color = 'white'
 </script>
 
 <style>
     div {
+        font-family: 'Nougat';
         font-size: var(--fontSize);
-        color: white;
+        color: var(--color);
         -webkit-background-clip: text;
-        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-width: 1.2px;
         -webkit-text-stroke-color: black;
-        font-weight: bold;
         letter-spacing: -1px;
     }
 </style>
 
-<div style="--fontSize:{fontSize}">{title}</div>
+<div style="--fontSize:{fontSize};--color:{color}">{title}</div>
 
 <!--
 div {
