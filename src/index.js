@@ -1,7 +1,7 @@
-import App from './components/App.svelte'
+import React from "react";
+import ReactDOM from "react-dom";
 
-const app = new App({
-    target: document.body
-})
+import App from "./App";
 
-export default app
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
