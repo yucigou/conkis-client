@@ -2,7 +2,11 @@ import React from 'react'
 import styled from '@emotion/styled'
 import TextShadow from 'components/stateless/TextShadow'
 
-function ButtonBig({ title, fontSize = '50px', color = '#e8bc08' }) {
+export default function ButtonBig({
+    title,
+    fontSize = '50px',
+    color = '#e8bc08'
+}) {
     return (
         <Container fontSize={fontSize} color={color}>
             <ContainerText>
@@ -40,5 +44,3 @@ const InnerShadow = styled.div`
 `
 
 const ContainerText = styled.div``
-
-export default ButtonBig

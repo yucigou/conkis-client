@@ -1,7 +1,11 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-function TextBorder({ title, fontSize = '35px', color = 'white' }) {
+export default function TextBorder({
+    title,
+    fontSize = '35px',
+    color = 'white'
+}) {
     return (
         <Text fontSize={fontSize} color={color}>
             {title}
@@ -18,5 +22,3 @@ const Text = styled.div`
     -webkit-text-stroke-color: black;
     letter-spacing: -0.5px;
 `
-
-export default TextBorder

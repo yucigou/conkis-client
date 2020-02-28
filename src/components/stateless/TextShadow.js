@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-function TextShadow({
+export default function TextShadow({
     title,
     fontSize = '35px',
     borderSize = '1.5px',
@@ -52,5 +52,3 @@ const Text = styled.div`
         position: absolute;
     }
 `
-
-export default TextShadow
