@@ -1,6 +1,7 @@
 import React from 'react'
 import TextShadow from 'components/stateless/TextShadow'
 import TextBorder from 'components/stateless/TextBorder'
+import ButtonBig from 'components/stateless/ButtonBig'
 
 export default function App() {
     return (
@@ -15,6 +16,7 @@ export default function App() {
             />
             <TextBorder title="Juandi" />
             <TextBorder title="Coypu" color="red" />
+            <ButtonBig title="Ranked" />
         </div>
     )
 }
