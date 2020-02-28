@@ -9,14 +9,14 @@ function TextShadow({
 }) {
     return (
         <Text fontSize={fontSize} borderSize={borderSize} shadowTop={shadowTop}>
-            <span class="shadow">{title}</span>
-            <span class="body">{title}</span>
+            <span className="shadow">{title}</span>
+            <span className="body">{title}</span>
         </Text>
     )
 }
 
 const Text = styled.div`
-    font-family: 'Nougat';
+    font-family: 'Nougata';
     font-size: ${p => p.fontSize};
     letter-spacing: -1px;
     position: relative;

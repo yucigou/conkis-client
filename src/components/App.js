@@ -1,11 +1,10 @@
 import React from 'react'
-import './css'
-import TextShadow from './components/stateless/TextShadow'
-import TextBorder from './components/stateless/TextBorder'
+import TextShadow from 'components/stateless/TextShadow'
+import TextBorder from 'components/stateless/TextBorder'
 
 export default function App() {
     return (
-        <div className="App">
+        <div>
             <TextShadow title="Enzo" />
             {/* <TextShadow2 title="Eñzó" /> */}
             <TextShadow
