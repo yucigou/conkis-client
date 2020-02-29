@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 export default function Home() {
     return (
         <Container>
+            <Background />
             <Top />
             <Bottom />
             <Content>
@@ -32,18 +33,40 @@ const Container = styled.div`
         rgba(217, 216, 208, 0) 90%
     );
 `
+
+const Background = styled.div`
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/img/weaponsbg.png') 0 0 / auto 200px;
+    opacity: 0.1;
+    animation: AnimationName 15s linear infinite;
+
+    @keyframes AnimationName {
+        0% {
+            background-position: 0 200px;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+`
+
 const Top = styled.div`
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 5%;
     background: black;
 `
 
 const Bottom = styled.div`
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 5%;
     background: black;
-    bottom: 0;
-    position: absolute;
 `
 
 const Content = styled.div`
