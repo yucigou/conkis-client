@@ -4,14 +4,13 @@ import TextShadow from 'components/stateless/TextShadow'
 
 export default function ButtonBig({
     title,
-    fontSize = '25px',
     height = '50px',
     color = '#e8bc08'
 }) {
     return (
-        <Container fontSize={fontSize} height={height} color={color}>
+        <Container height={height} color={color}>
             <ContainerText>
-                <TextShadow fontSize={fontSize} title={title} />
+                <TextShadow title={title} />
             </ContainerText>
             <InnerShadow />
             {/* <InnerLight /> */}
@@ -27,7 +26,7 @@ const Container = styled.div`
         rgba(231, 191, 6, 1) 0%,
         rgba(239, 173, 0, 1) 100%
     );
-    border: 4px solid black;
+    border: 3px solid black;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -54,6 +53,6 @@ const InnerShadow = styled.div`
 // `
 
 const ContainerText = styled.div`
-    /* top: -1px; */
-    /* position: relative; */
+    top: -1px;
+    position: relative;
 `

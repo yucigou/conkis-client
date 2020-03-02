@@ -21,10 +21,10 @@ export default function Home() {
                         <ButtonBig title="Tutorial" />
                     </Tutorial>
                     <Tutorial>
-                        <ButtonBig title="Tutorial" />
+                        <ButtonBig title="Normal" />
                     </Tutorial>
                     <Tutorial>
-                        <ButtonBig title="Tutorial" />
+                        <ButtonBig title="Ranked" />
                     </Tutorial>
                 </Middle>
                 <Footer></Footer>
