@@ -8,6 +8,7 @@ body {
     font-family: Poppins;
     font-weight: normal;
     background-color: #8b755b;
+    user-select: none;
 }
 
 @font-face {

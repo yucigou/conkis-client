@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import ButtonBig from 'components/stateless/ButtonBig'
 
 export default function Home() {
     return (
@@ -15,8 +16,18 @@ export default function Home() {
                     </HeaderCenter>
                     <HeaderRight></HeaderRight>
                 </Header>
-                <Middle></Middle>
-                {/* <Footer>Hola</Footer> */}
+                <Middle>
+                    <Tutorial>
+                        <ButtonBig title="Tutorial" />
+                    </Tutorial>
+                    <Tutorial>
+                        <ButtonBig title="Tutorial" />
+                    </Tutorial>
+                    <Tutorial>
+                        <ButtonBig title="Tutorial" />
+                    </Tutorial>
+                </Middle>
+                <Footer></Footer>
             </Content>
         </Container>
     )
@@ -26,11 +37,11 @@ const Container = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgb(217, 216, 208);
+    background: rgb(246, 216, 208);
     background: radial-gradient(
         circle,
-        rgba(217, 216, 208, 0.9) 0%,
-        rgba(217, 216, 208, 0) 90%
+        rgba(246, 236, 219, 0.9) 0%,
+        rgba(246, 236, 219, 0) 100%
     );
 `
 
@@ -41,7 +52,7 @@ const Background = styled.div`
     height: 100%;
     background: url('/assets/img/weaponsbg.png') 0 0 / auto 200px;
     opacity: 0.1;
-    animation: AnimationName 15s linear infinite;
+    animation: AnimationName 20s linear infinite;
 
     @keyframes AnimationName {
         0% {
@@ -57,7 +68,7 @@ const Top = styled.div`
     position: absolute;
     top: 0;
     width: 100%;
-    height: 5%;
+    height: 30px;
     background: black;
 `
 
@@ -65,7 +76,7 @@ const Bottom = styled.div`
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 5%;
+    height: 30px;
     background: black;
 `
 
@@ -83,15 +94,21 @@ const Header = styled.div`
     width: 100%;
     display: flex;
     flex: 0 1 auto;
+    /* background: blue; */
 `
 
 const Middle = styled.div`
     flex: 1;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 const Footer = styled.div`
-    background: green;
+    /* background: green; */
     width: 100%;
+    height: 50px;
     display: flex;
     flex: 0 1 auto;
 `
@@ -111,4 +128,10 @@ const HeaderRight = styled.div`
 const Logo = styled.img`
     width: 125px;
     height: 63px;
+`
+
+const Tutorial = styled.div`
+    width: 200px;
+    height: 50px;
+    margin: 0 10px;
 `

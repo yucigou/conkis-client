@@ -5,7 +5,7 @@ export default function TextShadow({
     title,
     fontSize = '35px',
     borderSize = '1.5px',
-    shadowTop = '4px'
+    shadowTop = '2.5px'
 }) {
     return (
         <Text fontSize={fontSize} borderSize={borderSize} shadowTop={shadowTop}>
@@ -19,7 +19,7 @@ export default function TextShadow({
 const Text = styled.div`
     font-family: 'Nougata';
     font-size: ${p => p.fontSize};
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     position: relative;
 
     .transparent {
