@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import Button from 'components/stateless/Button'
 
 export default function Window({
     title = '',
@@ -7,25 +8,31 @@ export default function Window({
     height = '100%'
 }) {
     return (
-        <Container width={width} height={height}>
-            <Container2>
+        <Background width={width} height={height}>
+            <Container>
                 <WoodBackground />
                 <Header />
                 <Content>
                     <Title>{title}</Title>
                 </Content>
-            </Container2>
-        </Container>
+            </Container>
+            <Close>
+                <Button>
+                    <CloseIcon src="/assets/img/close.png" />
+                </Button>
+            </Close>
+        </Background>
     )
 }
 
-const Container = styled.div`
+const Background = styled.div`
+    position: relative;
     width: ${p => p.width};
     height: ${p => p.height};
     background: url('/assets/img/window-left.png') no-repeat 0 5% / auto 100%,
         url('/assets/img/window-right.png') no-repeat right 5% / auto 100%;
 `
-const Container2 = styled.div`
+const Container = styled.div`
     margin: 0 6%;
     box-sizing: content-box;
     background: red;
@@ -75,4 +82,17 @@ const Title = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+`
+
+const Close = styled.div`
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    right: 8px;
+    top: -18px;
+    transform: rotate(15deg) scale(0.5);
+`
+
+const CloseIcon = styled.img`
+    height: 35px;
 `
