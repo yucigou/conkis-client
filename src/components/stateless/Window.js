@@ -65,9 +65,14 @@ const Content = styled.div`
 `
 
 const Title = styled.div`
-    text-align: center;
+    /* text-align: center; */
     font-size: 30px;
     font-family: 'Nougata';
     color: white;
-    margin-top: 12px;
+    /* margin-top: 12px; */
+    height: 20%;
+    /* line-height: 20%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `

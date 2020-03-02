@@ -128,6 +128,7 @@ const HeaderRight = styled.div`
 const Logo = styled.img`
     width: 125px;
     height: 63px;
+    margin-left: -20px;
 `
 
 const Tutorial = styled.div`
