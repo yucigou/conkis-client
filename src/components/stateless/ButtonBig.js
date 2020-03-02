@@ -13,7 +13,8 @@ export default function ButtonBig({
                 <TextShadow title={title} />
             </ContainerText>
             <InnerShadow />
-            {/* <InnerLight /> */}
+            <InnerLight />
+            {/* <InnerLight2 /> */}
         </Container>
     )
 }
@@ -27,7 +28,7 @@ const Container = styled.div`
         rgba(239, 173, 0, 1) 100%
     );
     border: 3px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,12 +45,21 @@ const InnerShadow = styled.div`
     height: 15%;
 `
 
-// const InnerLight = styled.div`
+const InnerLight = styled.div`
+    top: 0;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 10%;
+    width: 100%;
+`
+
+// const InnerLight2 = styled.div`
 //     top: 0;
+//     right: 2;
 //     position: absolute;
 //     background-color: rgba(255, 255, 255, 0.1);
-//     height: 15%;
-//     width: 100%;
+//     height: 10%;
+//     width: 5px;
 // `
 
 const ContainerText = styled.div`

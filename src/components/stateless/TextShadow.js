@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 export default function TextShadow({
     title,
     fontSize = '22px',
-    borderSize = '1.2px',
+    borderSize = '1px',
     shadowTop = '2.5px'
 }) {
     return (
@@ -12,7 +12,7 @@ export default function TextShadow({
             <span className="transparent">{title}</span>
             <span className="shadow">{title}</span>
             <span className="gradient">{title}</span>
-            <span className="body">{title}</span>
+            <span className="border">{title}</span>
         </Text>
     )
 }
@@ -20,29 +20,18 @@ export default function TextShadow({
 const Text = styled.div`
     font-family: 'Nougata';
     font-size: ${p => p.fontSize};
-    letter-spacing: 0;
+    letter-spacing: 0px;
     position: relative;
 
     .transparent {
         visibility: hidden;
     }
 
-    .body {
+    .border {
         position: absolute;
         left: 0;
         top: 0;
         color: transparent;
-        /* background: linear-gradient(
-            to bottom,
-            #ffffff 0%,
-            #ffffff 50%,
-            #ebebeb 51%,
-            #ebebeb 100%
-        ); */
-
-        /* -webkit-background-clip: text; */
-        /* -webkit-text-fill-color: transparent; */
-
         -webkit-text-stroke-width: ${p => p.borderSize};
         -webkit-text-stroke-color: black;
     }
