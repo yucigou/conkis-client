@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-export default function Input({ width = '100%', height = '45px', ...props }) {
+export default function Input({
+    width = '100%',
+    height = '45px',
+    borderColor = 'black',
+    ...props
+}) {
     return (
-        <Container width={width} height={height}>
+        <Container width={width} height={height} borderColor={borderColor}>
             <InputStyled {...props} />
         </Container>
     )
@@ -14,7 +19,7 @@ const Container = styled.div`
     height: ${p => p.height};
     position: relative;
     background: white;
-    border: 2px solid black;
+    border: 2px solid ${p => p.borderColor};
     border-radius: 5px;
     box-shadow: 1px 5px inset rgba(0, 0, 0, 0.1);
     transform: skewX(-3deg);

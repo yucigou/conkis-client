@@ -26,6 +26,12 @@ const Container = styled.div`
     align-items: center;
     height: ${p => p.height};
     box-shadow: 3px 5px black;
+    margin-bottom: 5px;
+
+    &:active {
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
 `
 
 const InnerShadow = styled.div`

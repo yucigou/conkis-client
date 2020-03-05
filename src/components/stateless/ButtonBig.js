@@ -39,9 +39,11 @@ const Container = styled.div`
     height: ${p => p.height};
     box-shadow: 0 5px rgba(0, 0, 0, 0.2);
     transform: skewX(-3deg);
+    margin-bottom: 5px;
 
     &:active {
         box-shadow: none;
+        margin-bottom: 0;
         margin-top: 5px;
     }
 `
