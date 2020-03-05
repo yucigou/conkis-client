@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-export default function Input({ width = '100%', height = '40px', ...props }) {
+export default function Input({ width = '100%', height = '45px', ...props }) {
     return (
         <Container width={width} height={height}>
             <InputStyled {...props} />

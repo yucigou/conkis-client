@@ -4,7 +4,7 @@ import TextShadow from 'components/stateless/TextShadow'
 
 export default function ButtonBig({
     children,
-    height = '50px',
+    height = '60px',
     color = '#e8bc08'
 }) {
     return (

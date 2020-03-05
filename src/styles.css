@@ -10,6 +10,9 @@ body {
     background-color: #8b755b;
     user-select: none;
 }
+* {
+    box-sizing: border-box;
+}
 
 @font-face {
     font-family: 'Poppins';

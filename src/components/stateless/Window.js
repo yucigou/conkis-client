@@ -4,14 +4,21 @@ import ButtonClose from 'components/stateless/ButtonClose'
 
 export default function Window({
     title = '',
-    width = '100%',
-    height = '100%',
+    width = 'auto',
+    height = 'auto',
+    minWidth = 'auto',
+    minHeight = 'auto',
     children
 }) {
     return (
-        <Background width={width} height={height}>
-            <Container>
-                <WoodBackground />
+        <BackgroundWood
+            width={width}
+            height={height}
+            minWidth={minWidth}
+            minHeight={minHeight}
+        >
+            <Container minWidth={minWidth} minHeight={minHeight}>
+                <BackgroundPattern />
                 <Header />
                 <Content>
                     <Title>{title}</Title>
@@ -23,22 +30,27 @@ export default function Window({
                     <CloseIcon src="/assets/img/close.png" />
                 </ButtonClose>
             </Close>
-        </Background>
+        </BackgroundWood>
     )
 }
 
-const Background = styled.div`
+const BackgroundWood = styled.div`
     position: relative;
     width: ${p => p.width};
     height: ${p => p.height};
+    min-width: ${p => p.minWidth};
+    min-height: ${p => p.minHeight};
     background: url('/assets/img/window-left.png') no-repeat 0 5% / auto 100%,
         url('/assets/img/window-right.png') no-repeat right 5% / auto 100%;
 `
+
 const Container = styled.div`
-    margin: 0 7%;
+    height: calc(100% - 0.6em);
+    min-width: ${p => p.minWidth};
+    min-height: ${p => p.minHeight};
+    margin: 0 30px;
     box-sizing: content-box;
     background: red;
-    height: calc(100% - 0.6em);
     border-radius: 10px;
     background: #684f40;
     background: linear-gradient(135deg, #816850 0%, #573f34 100%);
@@ -47,7 +59,7 @@ const Container = styled.div`
     overflow: hidden;
 `
 
-const WoodBackground = styled.div`
+const BackgroundPattern = styled.div`
     height: 100%;
     width: 100%;
     position: absolute;
@@ -56,7 +68,7 @@ const WoodBackground = styled.div`
 `
 
 const Header = styled.div`
-    height: 30%;
+    height: 120px;
     width: 152%;
     position: absolute;
     top: -28px;
@@ -68,29 +80,29 @@ const Header = styled.div`
 const Content = styled.div`
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
 `
 
 const Title = styled.div`
-    /* text-align: center; */
+    text-align: center;
+    padding-top: 25px;
     font-size: 30px;
     font-family: 'Nougata';
     color: white;
-    /* margin-top: 12px; */
-    height: 20%;
+    height: 100px;
     /* line-height: 20%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
 `
 
 const Close = styled.div`
     width: 70px;
     height: 60px;
     position: absolute;
-    right: 15px;
+    right: 10px;
     top: -20px;
     transform: rotate(15deg) scale(0.5);
 `

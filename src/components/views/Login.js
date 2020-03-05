@@ -6,16 +6,19 @@ import Input from 'components/stateless/Input'
 
 export default function Login() {
     return (
-        <Window title="Login" width="500px" height="300px">
+        <Window title="Login" width="500px" minHeight="300px">
             <Form>
                 <FormField>
-                    <Input placeholder="Username" />
+                    <Input placeholder="Email" />
                 </FormField>
                 <FormField>
                     <Input placeholder="Password" type="password" />
                 </FormField>
+                {/* <FormField>
+                    <Input placeholder="Username" />
+                </FormField> */}
                 <FormField>
-                    <ButtonBig>LOGIN</ButtonBig>
+                    <ButtonBig>Login</ButtonBig>
                 </FormField>
             </Form>
         </Window>
@@ -23,7 +26,7 @@ export default function Login() {
 }
 
 const Form = styled.div`
-    padding: 30px 30px 30px 30px;
+    padding: 0 30px 30px 30px;
 `
 
 const FormField = styled.div`
