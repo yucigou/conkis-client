@@ -18,13 +18,13 @@ export default function Home() {
                 </Header>
                 <Middle>
                     <Tutorial>
-                        <ButtonBig>Tutorial</ButtonBig>
+                        <ButtonBig fontSize="25px">Tutorial</ButtonBig>
                     </Tutorial>
                     <Tutorial>
-                        <ButtonBig>Normal</ButtonBig>
+                        <ButtonBig fontSize="25px">Normal</ButtonBig>
                     </Tutorial>
                     <Tutorial>
-                        <ButtonBig>Ranked</ButtonBig>
+                        <ButtonBig fontSize="25px">Ranked</ButtonBig>
                     </Tutorial>
                 </Middle>
                 <Footer></Footer>
@@ -128,7 +128,7 @@ const HeaderRight = styled.div`
 const Logo = styled.img`
     width: 125px;
     height: 63px;
-    margin-left: 10px;
+    margin-left: -30px;
 `
 
 const Tutorial = styled.div`

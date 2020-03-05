@@ -47,7 +47,6 @@ const Text = styled.div`
         position: absolute;
         left: 0;
         top: 0;
-        background: #fff;
         background: linear-gradient(
             to bottom,
             #ffffff 0%,

@@ -6,12 +6,13 @@ export default function ButtonBig({
     children,
     height = '60px',
     color1 = '#e8bc08',
+    fontSize,
     disabled = false
 }) {
     return (
         <Container height={height} color1={color1} disabled={disabled}>
             <ContainerText disabled={disabled}>
-                <TextShadow title={children} />
+                <TextShadow title={children} fontSize={fontSize} />
             </ContainerText>
             <InnerShadow />
             <InnerLight />
