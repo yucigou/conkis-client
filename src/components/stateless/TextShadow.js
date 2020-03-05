@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 export default function TextShadow({
     title,
     fontSize = '22px',
-    borderSize = '0.7px',
+    borderSize = '0.5px',
     shadowTop = '2.5px'
 }) {
     return (

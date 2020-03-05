@@ -18,7 +18,10 @@ export default function Login() {
                     <Input placeholder="Username" />
                 </FormField> */}
                 <FormField>
-                    <ButtonBig>Login</ButtonBig>
+                    <FormButtons>
+                        <ButtonBig>Login</ButtonBig>
+                        <ButtonBig disabled={true}>Register</ButtonBig>
+                    </FormButtons>
                 </FormField>
             </Form>
         </Window>
@@ -31,4 +34,16 @@ const Form = styled.div`
 
 const FormField = styled.div`
     margin-bottom: 5px;
+`
+
+const FormButtons = styled.div`
+    display: flex;
+    flex-direction: row;
+    & > * {
+        flex: 1;
+        margin-left: 5px;
+    }
+    & > *:first-child {
+        margin-left: 0;
+    }
 `

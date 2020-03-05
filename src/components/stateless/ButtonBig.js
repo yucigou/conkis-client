@@ -5,11 +5,12 @@ import TextShadow from 'components/stateless/TextShadow'
 export default function ButtonBig({
     children,
     height = '60px',
-    color = '#e8bc08'
+    color1 = '#e8bc08',
+    disabled = false
 }) {
     return (
-        <Container height={height} color={color}>
-            <ContainerText>
+        <Container height={height} color1={color1} disabled={disabled}>
+            <ContainerText disabled={disabled}>
                 <TextShadow title={children} />
             </ContainerText>
             <InnerShadow />
@@ -21,13 +22,16 @@ export default function ButtonBig({
 
 const Container = styled.div`
     position: relative;
-    background: rgb(231, 191, 6);
-    background: linear-gradient(
-        180deg,
-        rgba(231, 191, 6, 1) 0%,
-        rgba(239, 173, 0, 1) 100%
-    );
-    border: 3px solid black;
+    pointer-events: ${p => (p.disabled ? 'none' : 'auto')};
+    background: ${p =>
+        p.disabled
+            ? '#84796f'
+            : `linear-gradient(
+                180deg,
+                rgba(231, 191, 6, 1) 0%,
+                rgba(239, 173, 0, 1) 100%
+            )`};
+    border: 2px solid black;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -35,6 +39,11 @@ const Container = styled.div`
     height: ${p => p.height};
     box-shadow: 0 5px rgba(0, 0, 0, 0.2);
     transform: skewX(-3deg);
+
+    &:active {
+        box-shadow: none;
+        margin-top: 5px;
+    }
 `
 
 const InnerShadow = styled.div`
@@ -65,4 +74,5 @@ const InnerLight = styled.div`
 const ContainerText = styled.div`
     top: -1px;
     position: relative;
+    opacity: ${p => (p.disabled ? '0.7' : '1')};
 `
