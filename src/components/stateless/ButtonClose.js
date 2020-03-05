@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 export default function Button({
     children,
-    height = '50px',
+    height = '55px',
     color = '#e8bc08'
 }) {
     return (
