@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from 'components/views/Home'
-import Window from 'components/stateless/Window'
+import Login from 'components/views/Login'
 import Overlay from 'components/stateless/Overlay'
 
 export default function App() {
@@ -8,7 +8,7 @@ export default function App() {
         <div>
             <Home />
             <Overlay>
-                <Window title="Login" width="500px" height="350px" />
+                <Login />
             </Overlay>
         </div>
     )

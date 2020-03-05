@@ -18,13 +18,13 @@ export default function Home() {
                 </Header>
                 <Middle>
                     <Tutorial>
-                        <ButtonBig title="Tutorial" />
+                        <ButtonBig>Tutorial</ButtonBig>
                     </Tutorial>
                     <Tutorial>
-                        <ButtonBig title="Normal" />
+                        <ButtonBig>Normal</ButtonBig>
                     </Tutorial>
                     <Tutorial>
-                        <ButtonBig title="Ranked" />
+                        <ButtonBig>Ranked</ButtonBig>
                     </Tutorial>
                 </Middle>
                 <Footer></Footer>

@@ -3,14 +3,14 @@ import styled from '@emotion/styled'
 import TextShadow from 'components/stateless/TextShadow'
 
 export default function ButtonBig({
-    title,
+    children,
     height = '50px',
     color = '#e8bc08'
 }) {
     return (
         <Container height={height} color={color}>
             <ContainerText>
-                <TextShadow title={title} />
+                <TextShadow title={children} />
             </ContainerText>
             <InnerShadow />
             <InnerLight />

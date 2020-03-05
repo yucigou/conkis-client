@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import Button from 'components/stateless/Button'
+import ButtonClose from 'components/stateless/ButtonClose'
 
 export default function Window({
     title = '',
     width = '100%',
-    height = '100%'
+    height = '100%',
+    children
 }) {
     return (
         <Background width={width} height={height}>
@@ -14,12 +15,13 @@ export default function Window({
                 <Header />
                 <Content>
                     <Title>{title}</Title>
+                    {children}
                 </Content>
             </Container>
             <Close>
-                <Button>
+                <ButtonClose>
                     <CloseIcon src="/assets/img/close.png" />
-                </Button>
+                </ButtonClose>
             </Close>
         </Background>
     )
@@ -33,7 +35,7 @@ const Background = styled.div`
         url('/assets/img/window-right.png') no-repeat right 5% / auto 100%;
 `
 const Container = styled.div`
-    margin: 0 6%;
+    margin: 0 7%;
     box-sizing: content-box;
     background: red;
     height: calc(100% - 0.6em);
@@ -60,7 +62,7 @@ const Header = styled.div`
     top: -28px;
     left: -20px;
     background: black;
-    transform: rotate(5deg);
+    transform: rotate(3.5deg);
 `
 
 const Content = styled.div`
@@ -88,8 +90,8 @@ const Close = styled.div`
     width: 70px;
     height: 60px;
     position: absolute;
-    right: 8px;
-    top: -18px;
+    right: 15px;
+    top: -20px;
     transform: rotate(15deg) scale(0.5);
 `
 
