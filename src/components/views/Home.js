@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import ButtonBig from 'components/stateless/ButtonBig'
+import ButtonHeader from 'components/stateless/ButtonHeader'
 
 export default function Home() {
     return (
@@ -14,7 +15,9 @@ export default function Home() {
                     <HeaderCenter>
                         <Logo src="/assets/img/logo.png" />
                     </HeaderCenter>
-                    <HeaderRight></HeaderRight>
+                    <HeaderRight paddingRight="20px" paddingTop="10px">
+                        <ButtonHeader>Login</ButtonHeader>
+                    </HeaderRight>
                 </Header>
                 <Middle>
                     <Tutorial>
@@ -123,12 +126,18 @@ const HeaderCenter = styled.div`
 `
 const HeaderRight = styled.div`
     flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-right: ${p => p.paddingRight || '0'};
+    padding-top: ${p => p.paddingTop || '0'};
 `
 
 const Logo = styled.img`
-    width: 125px;
-    height: 63px;
-    margin-left: -30px;
+    width: 150px;
+    height: 75px;
+    margin-left: -20px;
 `
 
 const Tutorial = styled.div`

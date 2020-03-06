@@ -21,7 +21,7 @@ const Container = styled.div`
     background: white;
     border: 2px solid ${p => p.borderColor};
     border-radius: 5px;
-    box-shadow: 1px 5px inset rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 5px inset rgba(0, 0, 0, 0.1);
     transform: skewX(-3deg);
 `
 

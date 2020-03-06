@@ -7,9 +7,11 @@ export default function App() {
     return (
         <div>
             <Home />
-            <Overlay>
-                <Login />
-            </Overlay>
+            {false && (
+                <Overlay>
+                    <Login />
+                </Overlay>
+            )}
         </div>
     )
 }

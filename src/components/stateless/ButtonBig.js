@@ -6,14 +6,26 @@ export default function ButtonBig({
     children,
     height = '60px',
     color1 = '#e8bc08',
+    color2 = '#efad00',
+    transform = 'skewX(-3deg)',
     fontSize,
     disabled = false
 }) {
     return (
-        <Container height={height} color1={color1} disabled={disabled}>
-            <ContainerText disabled={disabled}>
-                <TextShadow title={children} fontSize={fontSize} />
-            </ContainerText>
+        <Container
+            height={height}
+            color1={color1}
+            color2={color2}
+            disabled={disabled}
+            transform={transform}
+        >
+            {typeof children === 'string' ? (
+                <ContainerText disabled={disabled}>
+                    <TextShadow title={children} fontSize={fontSize} />
+                </ContainerText>
+            ) : (
+                children
+            )}
             <InnerShadow />
             <InnerLight />
             {/* <InnerLight2 /> */}
@@ -27,11 +39,11 @@ const Container = styled.div`
     background: ${p =>
         p.disabled
             ? '#84796f'
-            : `linear-gradient(
-                180deg,
-                rgba(231, 191, 6, 1) 0%,
-                rgba(239, 173, 0, 1) 100%
-            )`};
+            : 'linear-gradient(180deg,' +
+              p.color1 +
+              ' 0%, ' +
+              p.color2 +
+              ' 100%)'};
     border: 2px solid black;
     border-radius: 5px;
     display: flex;
@@ -39,7 +51,7 @@ const Container = styled.div`
     align-items: center;
     height: ${p => p.height};
     box-shadow: 0 5px rgba(0, 0, 0, 0.2);
-    transform: skewX(-3deg);
+    transform: ${p => p.transform};
     margin-bottom: 5px;
 
     &:active {
