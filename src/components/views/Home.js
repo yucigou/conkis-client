@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import Header from 'components/partials/Header'
 import ButtonBig from 'components/stateless/ButtonBig'
-import ButtonHeader from 'components/stateless/ButtonHeader'
 
 export default function Home() {
     return (
@@ -10,15 +10,7 @@ export default function Home() {
             <Top />
             <Bottom />
             <Content>
-                <Header>
-                    <HeaderLeft></HeaderLeft>
-                    <HeaderCenter>
-                        <Logo src="/assets/img/logo.png" />
-                    </HeaderCenter>
-                    <HeaderRight paddingRight="20px" paddingTop="10px">
-                        <ButtonHeader>Login</ButtonHeader>
-                    </HeaderRight>
-                </Header>
+                <Header />
                 <Middle>
                     <Tutorial>
                         <ButtonBig fontSize="25px">Tutorial</ButtonBig>
@@ -93,13 +85,6 @@ const Content = styled.div`
     flex-direction: column;
 `
 
-const Header = styled.div`
-    width: 100%;
-    display: flex;
-    flex: 0 1 auto;
-    /* background: blue; */
-`
-
 const Middle = styled.div`
     flex: 1;
     /* background: red; */
@@ -114,30 +99,6 @@ const Footer = styled.div`
     height: 50px;
     display: flex;
     flex: 0 1 auto;
-`
-
-const HeaderLeft = styled.div`
-    flex: 1;
-`
-const HeaderCenter = styled.div`
-    flex: 0 1;
-    display: flex;
-    justify-content: center;
-`
-const HeaderRight = styled.div`
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    align-items: flex-start;
-    padding-right: ${p => p.paddingRight || '0'};
-    padding-top: ${p => p.paddingTop || '0'};
-`
-
-const Logo = styled.img`
-    width: 150px;
-    height: 75px;
-    margin-left: -20px;
 `
 
 const Tutorial = styled.div`
