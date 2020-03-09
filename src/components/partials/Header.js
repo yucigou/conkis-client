@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import ButtonPlain from 'components/stateless/ButtonPlain'
-import User from 'components/stateless/User'
+import UserData from 'components/partials/UserData'
 
 export default function Header() {
     return (
@@ -10,11 +10,13 @@ export default function Header() {
             <HeaderCenter>
                 <Logo src="/assets/img/logo.png" />
             </HeaderCenter>
-            {/* <HeaderRight paddingRight="20px" paddingTop="10px">
-                <ButtonPlain>Login</ButtonPlain>
-            </HeaderRight> */}
+            {false && (
+                <HeaderRight paddingRight="20px" paddingTop="10px">
+                    <ButtonPlain>Login</ButtonPlain>
+                </HeaderRight>
+            )}
             <HeaderRight>
-                <User>Login is a long cool</User>
+                <UserData username="Enzo" />
             </HeaderRight>
         </Container>
     )
