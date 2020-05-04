@@ -57,6 +57,7 @@ const Right = styled.div`
 
 const Username = styled.div`
     font-size: 18px;
+    padding-right: 10px;
 `
 const Progress = styled.div`
     height: 10px;

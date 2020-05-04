@@ -9,7 +9,7 @@ export default function ButtonBig({
     color2 = '#efad00',
     transform = 'skewX(-3deg)',
     fontSize,
-    disabled = false
+    disabled = false,
 }) {
     return (
         <Container
@@ -35,8 +35,8 @@ export default function ButtonBig({
 
 const Container = styled.div`
     position: relative;
-    pointer-events: ${p => (p.disabled ? 'none' : 'auto')};
-    background: ${p =>
+    pointer-events: ${(p) => (p.disabled ? 'none' : 'auto')};
+    background: ${(p) =>
         p.disabled
             ? '#84796f'
             : 'linear-gradient(180deg,' +
@@ -44,14 +44,14 @@ const Container = styled.div`
               ' 0%, ' +
               p.color2 +
               ' 100%)'};
-    border: 2px solid black;
+    border: 4px solid black;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: ${p => p.height};
+    height: ${(p) => p.height};
     box-shadow: 0 5px rgba(0, 0, 0, 0.2);
-    transform: ${p => p.transform};
+    transform: ${(p) => p.transform};
     margin-bottom: 5px;
 
     &:active {
@@ -89,5 +89,5 @@ const InnerLight = styled.div`
 const ContainerText = styled.div`
     top: -1px;
     position: relative;
-    opacity: ${p => (p.disabled ? '0.7' : '1')};
+    opacity: ${(p) => (p.disabled ? '0.7' : '1')};
 `
