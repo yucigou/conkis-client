@@ -13,13 +13,13 @@ export default function Home() {
                 <Header />
                 <Middle>
                     <Tutorial>
-                        <ButtonBig fontSize="25px">Tutorial</ButtonBig>
+                        <ButtonBig>Tutorial</ButtonBig>
                     </Tutorial>
                     <Tutorial>
-                        <ButtonBig fontSize="25px">Normal</ButtonBig>
+                        <ButtonBig>Find Game</ButtonBig>
                     </Tutorial>
                     <Tutorial>
-                        <ButtonBig fontSize="25px">Ranked</ButtonBig>
+                        <ButtonBig>Ranked</ButtonBig>
                     </Tutorial>
                 </Middle>
                 <Footer></Footer>

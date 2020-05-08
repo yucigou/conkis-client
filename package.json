@@ -10,6 +10,7 @@
     "dependencies": {
         "@emotion/core": "^10.0.27",
         "@emotion/styled": "^10.0.27",
+        "dop": "^1.2.0",
         "emotion": "^10.0.27",
         "lodash.template": "^4.5.0",
         "react": "16.12.0",

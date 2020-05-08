@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 export default function TextBorder({
     title,
     fontSize = '35px',
-    color = 'white'
+    color = 'white',
 }) {
     return (
         <Text fontSize={fontSize} color={color}>
@@ -15,10 +15,10 @@ export default function TextBorder({
 
 const Text = styled.div`
     font-family: 'Nougat';
-    font-size: ${p => p.fontSize};
-    color: ${p => p.color};
-    -webkit-background-clip: text;
+    font-size: ${(p) => p.fontSize};
+    color: ${(p) => p.color};
+    /* -webkit-background-clip: text;
     -webkit-text-stroke-width: 1.2px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: black; */
     letter-spacing: -0.5px;
 `

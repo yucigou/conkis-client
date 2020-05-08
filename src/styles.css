@@ -5,6 +5,7 @@ html {
     overflow: hidden;
 }
 body {
+    color: white;
     margin: 0;
     font-family: Poppins;
     font-weight: normal;
@@ -39,13 +40,37 @@ body {
     font-style: lighter;
 }
 
+/* 
 @font-face {
-    font-family: 'Nougata';
+    font-family: 'Nougat';
     src: url('/assets/fonts/Nougat.woff2') format('woff2'),
         url('/assets/fonts/Nougat.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+}*/
+
+/* @font-face {
+    font-family: 'Nougat';
+    src: url('/assets/fonts/Nougat.woff2') format('woff2'),
+        url('/assets/fonts/Nougat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+/* @font-face {
+    font-family: 'Chelsea';
+    src: url('/assets/fonts/ChelseaMarket-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+/* @font-face {
+    font-family: 'Neucha';
+    src: url('/assets/fonts/neucha-v10-latin_cyrillic-regular.woff2')
+        format('woff2');
+    font-weight: normal;
+    font-style: normal;
+} */
 
 /* 
 @font-face {

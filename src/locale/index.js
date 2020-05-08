@@ -1,21 +1,12 @@
 import template from 'lodash.template'
 import translations from 'locale/translations'
 
-export function Translate({ children, args = {} }) {
-    return translate(children, args)
-}
-
-export function translate(text, args = {}) {
-    return supplant(getTranslate(text), args)
-}
-
-function supplant(text, args) {
+export function supplant(text, args) {
     const compiled = template(text)
     return compiled(args)
 }
 
-function getTranslate(text, language = 'en') {
-    // console.log({ language, text })
+export function getTranslate(text, language = 'en') {
     if (language === 'en') return text
     const text_trimed = text.trim()
     if (

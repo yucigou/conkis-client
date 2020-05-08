@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import TextShadow from 'components/stateless/TextShadow'
 
 export default function ButtonBig({
     children,
@@ -21,7 +20,7 @@ export default function ButtonBig({
         >
             {typeof children === 'string' ? (
                 <ContainerText disabled={disabled}>
-                    <TextShadow title={children} fontSize={fontSize} />
+                    <Text fontSize={fontSize}>{children}</Text>
                 </ContainerText>
             ) : (
                 children
@@ -90,4 +89,23 @@ const ContainerText = styled.div`
     top: -1px;
     position: relative;
     opacity: ${(p) => (p.disabled ? '0.7' : '1')};
+`
+const Text = styled.span`
+    /* Nougat, Chelsea, Neucha */
+    /* font-family: Nougat; */
+    font-size: 20px;
+    /* letter-spacing: 1px; */
+    text-shadow: 0.07em 0.07em 0 rgba(15, 18, 23, 0.9),
+        -0.07em 0.07em 0 rgba(15, 18, 23, 0.9),
+        0.07em -0.07em 0 rgba(15, 18, 23, 0.9),
+        -0.07em -0.07em 0 rgba(15, 18, 23, 0.9),
+        0 0.0798em 0 rgba(15, 18, 23, 0.9), 0 -0.0798em 0 rgba(15, 18, 23, 0.9),
+        0.0798em 0 0 rgba(15, 18, 23, 0.9), -0.0798em 0 0 rgba(15, 18, 23, 0.9),
+        0 0.0998em 0 rgba(15, 18, 23, 0.9),
+        0.0798em 0.0998em 0 rgba(15, 18, 23, 0.9),
+        -0.0798em 0.0998em 0 rgba(15, 18, 23, 0.9),
+        0 0.1398em 0 rgba(15, 18, 23, 0.9),
+        0.0798em 0.1398em 0 rgba(15, 18, 23, 0.9),
+        -0.0798em 0.1398em 0 rgba(15, 18, 23, 0.9),
+        -0.2em 0.13em 0 rgba(17, 17, 17, 0.25);
 `

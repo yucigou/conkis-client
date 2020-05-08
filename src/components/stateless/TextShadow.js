@@ -5,7 +5,7 @@ export default function TextShadow({
     title,
     fontSize = '22px',
     borderSize = '0.5px',
-    shadowTop = '2.5px'
+    shadowTop = '2.5px',
 }) {
     return (
         <Text fontSize={fontSize} borderSize={borderSize} shadowTop={shadowTop}>
@@ -18,8 +18,8 @@ export default function TextShadow({
 }
 
 const Text = styled.div`
-    font-family: 'Nougata';
-    font-size: ${p => p.fontSize};
+    font-family: 'Nougat';
+    font-size: ${(p) => p.fontSize};
     letter-spacing: 0px;
     position: relative;
 
@@ -32,14 +32,14 @@ const Text = styled.div`
         left: 0;
         top: 0;
         color: transparent;
-        -webkit-text-stroke-width: ${p => p.borderSize};
+        -webkit-text-stroke-width: ${(p) => p.borderSize};
         -webkit-text-stroke-color: black;
     }
 
     .shadow {
         position: absolute;
         left: 0;
-        top: ${p => p.shadowTop};
+        top: ${(p) => p.shadowTop};
         color: black;
     }
 

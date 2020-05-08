@@ -8,7 +8,7 @@ export default function Window({
     height = 'auto',
     minWidth = 'auto',
     minHeight = 'auto',
-    children
+    children,
 }) {
     return (
         <BackgroundWood
@@ -36,18 +36,18 @@ export default function Window({
 
 const BackgroundWood = styled.div`
     position: relative;
-    width: ${p => p.width};
-    height: ${p => p.height};
-    min-width: ${p => p.minWidth};
-    min-height: ${p => p.minHeight};
+    width: ${(p) => p.width};
+    height: ${(p) => p.height};
+    min-width: ${(p) => p.minWidth};
+    min-height: ${(p) => p.minHeight};
     background: url('/assets/img/window-left.png') no-repeat 0 5% / auto 100%,
         url('/assets/img/window-right.png') no-repeat right 5% / auto 100%;
 `
 
 const Container = styled.div`
     height: calc(100% - 0.6em);
-    min-width: ${p => p.minWidth};
-    min-height: ${p => p.minHeight};
+    min-width: ${(p) => p.minWidth};
+    min-height: ${(p) => p.minHeight};
     margin: 0 30px;
     box-sizing: content-box;
     background: red;
@@ -89,7 +89,7 @@ const Title = styled.div`
     text-align: center;
     padding-top: 25px;
     font-size: 30px;
-    font-family: 'Nougata';
+    font-family: 'Nougat';
     color: white;
     height: 100px;
     /* line-height: 20%; */
