@@ -1,18 +1,19 @@
 import { createStore } from 'dop'
-import { supplant, getTranslate } from 'locale/'
+import { CONNECTION } from 'const'
 
-const store = createStore({
-    language: 'en',
+export const store = createStore({
+    connection: CONNECTION.CLOSE,
+    connection_trys: 0,
+    language: 'es',
 })
-
-export function Translate({ children, args = {} }) {
-    return translate(children, args)
-}
-
-export function translate(text, args = {}) {
-    return supplant(getTranslate(text, store.state.language), args)
-}
 
 export function getGlobalState() {
     return store.state
+}
+
+export function setGlobalState(patch) {
+    store
+        .applyPatch(patch)
+        .filter(({ mutations }) => mutations.length > 0)
+        .forEach(({ listener, patch }) => listener(patch))
 }
