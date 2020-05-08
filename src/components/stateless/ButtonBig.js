@@ -43,7 +43,7 @@ const Container = styled.div`
               ' 0%, ' +
               p.color2 +
               ' 100%)'};
-    border: 4px solid black;
+    border: 3px solid black;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -95,6 +95,7 @@ const Text = styled.span`
     /* font-family: Nougat; */
     font-size: 20px;
     /* letter-spacing: 1px; */
+    color: white;
     text-shadow: 0.07em 0.07em 0 rgba(15, 18, 23, 0.9),
         -0.07em 0.07em 0 rgba(15, 18, 23, 0.9),
         0.07em -0.07em 0 rgba(15, 18, 23, 0.9),
