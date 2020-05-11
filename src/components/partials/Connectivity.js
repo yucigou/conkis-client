@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 import { CONNECTION } from 'const'
 import { Translate, translate } from 'locale/'
@@ -7,8 +7,9 @@ import { reconnect } from 'store/server'
 
 export default function Connectivity() {
     const [{ connection, connection_trys }] = useGlobalState('connection')
+
     // OPEN
-    if (connection === CONNECTION.OPEN) {
+    if (connection === CONNECTION.OPEN || connection_trys === 0) {
         return null
     }
     // CONNECTING
@@ -23,12 +24,28 @@ export default function Connectivity() {
     }
     // CLOSE
     return (
+        <ConnectivityClose
+            reconnect={reconnect}
+            connection_trys={connection_trys}
+        />
+    )
+}
+
+function ConnectivityClose({ reconnect, connection_trys }) {
+    const [seconds, setSeconds] = useState(connection_trys)
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setSeconds(seconds - 1)
+        }, 1000)
+        return () => clearTimeout(timeout)
+    }, [seconds, setSeconds])
+    return (
         <ConnectivityContainer onClick={reconnect}>
             <ConnectivityContainerError>
                 {translate(
                     // eslint-disable-next-line
                     'We have lost the connection with the server. Reconnecting in ${seconds}...',
-                    { seconds: connection_trys }
+                    { seconds }
                 )}
                 &nbsp;&nbsp;&nbsp;
                 <ReconnectButton>
